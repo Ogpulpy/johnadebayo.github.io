@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <rect width="800" height="600" fill="#e5e7eb"/>
+  <rect x="100" y="150" width="600" height="300" fill="#9ca3af"/>
+  <text x="400" y="300" font-family="Arial, sans-serif" font-size="32" text-anchor="middle" fill="#f8fafc">Portfolio Website</text>
+  <text x="400" y="350" font-family="Arial, sans-serif" font-size="20" text-anchor="middle" fill="#f8fafc">HTML | Tailwind CSS | JavaScript</text>
+</svg>

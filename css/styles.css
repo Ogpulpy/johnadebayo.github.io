@@ -1,0 +1,280 @@
+/* Custom styles beyond Tailwind CSS */
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Animation classes */
+.fade-in {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Hover effects */
+.hover-scale {
+    transition: transform 0.3s ease;
+}
+
+.hover-scale:hover {
+    transform: scale(1.05);
+}
+
+/* Timeline styles */
+.timeline-container {
+    position: relative;
+}
+
+.timeline-container::after {
+    content: '';
+    position: absolute;
+    width: 2px;
+    background-color: #e5e7eb;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -1px;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #38bdf8;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #0284c7;
+}
+
+/* Placeholder image styles */
+#profile-image, #project1-image, #project2-image, #project3-image, #project4-image, #project5-image, #project6-image {
+    background-color: #e5e7eb;
+}
+
+/* Make SVG images responsive */
+img[src$=".jpg"], img[src$=".svg"] {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+/* SVG responsive styles */
+svg {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+}
+
+/* Form focus styles */
+input:focus, textarea:focus {
+    outline: none;
+    border-color: #38bdf8;
+    box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.2);
+}
+
+/* Mobile menu transition */
+#mobile-menu {
+    transition: all 0.3s ease-in-out;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(-10px);
+}
+
+#mobile-menu.open {
+    max-height: 300px;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Footer styles */
+footer {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 0;
+    margin-top: auto;
+}
+
+footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(to right, transparent, rgba(56, 189, 248, 0.5), transparent);
+}
+
+footer a {
+    position: relative;
+    display: inline-block;
+}
+
+footer a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: #38bdf8;
+    transition: width 0.3s ease;
+}
+
+footer a:hover::after {
+    width: 100%;
+}
+
+footer a:hover svg {
+    transform: scale(1.2);
+    transition: transform 0.3s ease;
+    filter: drop-shadow(0 0 2px rgba(56, 189, 248, 0.5));
+}
+/* Navigation styles */
+/* Add space for fixed navbar */
+body {
+    padding-top: 0;
+    margin-bottom: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+
+/* First section padding to account for navbar */
+section:first-of-type {
+    padding-top: 6rem;
+}
+
+@media (min-width: 768px) {
+    section:first-of-type {
+        padding-top: 7rem;
+    }
+}
+
+/* Enhanced navigation effects */
+.nav-item {
+    position: relative;
+    padding: 0.5rem 0;
+    font-weight: 500;
+}
+
+.nav-item::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #38bdf8;
+    transition: width 0.3s ease;
+}
+
+.nav-item:hover::after {
+    width: 100%;
+}
+
+.nav-active {
+    color: #38bdf8;
+}
+
+.nav-active::after {
+    width: 100%;
+}
+
+/* Mobile navigation items */
+.mobile-nav-item {
+    border-left: 3px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.mobile-nav-item:hover {
+    border-left: 3px solid #38bdf8;
+}
+
+/* Navbar scroll effect */
+nav {
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease, border-bottom 0.3s ease;
+}
+
+.navbar-scrolled {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    backdrop-filter: blur(8px);
+    background-color: rgba(15, 23, 42, 0.95);
+    border-bottom: 1px solid rgba(56, 189, 248, 0.3);
+}
+
+/* Navigation hover glow effect */
+nav a:hover {
+    text-shadow: 0 0 8px rgba(56, 189, 248, 0.5);
+}
+
+/* Navigation logo effect */
+.nav-logo-text {
+    position: relative;
+    z-index: 1;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+/* Hamburger menu animation */
+.hamburger-line {
+    transform-origin: center;
+}
+
+.mobile-menu-open .hamburger-line:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.mobile-menu-open .hamburger-line:nth-child(2) {
+    opacity: 0;
+}
+
+.mobile-menu-open .hamburger-line:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+/* Logo hover effect */
+nav a.text-xl::before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    left: 0;
+    width: 0;
+    height: 0;
+    background: rgba(56, 189, 248, 0.15);
+    border-radius: 50%;
+    transform: translateY(-50%);
+    transition: width 0.4s ease, height 0.4s ease;
+}
+
+nav a.text-xl:hover::before {
+    width: 100%;
+    height: 150%;
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+    .container {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}

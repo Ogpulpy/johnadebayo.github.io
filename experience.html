@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experience - My Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0f172a',
+                        secondary: '#1e293b',
+                        accent: '#38bdf8',
+                        light: '#f8fafc',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'Roboto', 'sans-serif'],
+                    },
+                },
+            },
+        }
+    </script>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-light text-primary font-sans">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-primary text-light z-10 transition-all duration-300">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <a href="index.html" class="text-xl font-bold hover:text-accent transition-colors flex items-center">
+                    <span class="text-accent mr-2">&#9733;</span>
+                    <span class="nav-logo-text">My Portfolio</span>
+                </a>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-6">
+                    <a href="index.html" class="nav-item hover:text-accent transition-colors">Home</a>
+                    <a href="about.html" class="nav-item hover:text-accent transition-colors">About</a>
+                    <a href="experience.html" class="nav-item hover:text-accent transition-colors">Experience</a>
+                    <a href="projects.html" class="nav-item hover:text-accent transition-colors">Projects</a>
+                    <a href="contact.html" class="nav-item hover:text-accent transition-colors">Contact</a>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <button class="md:hidden flex flex-col space-y-1.5" id="mobile-menu-button" aria-label="Toggle menu">
+                    <span class="block w-6 h-0.5 bg-light transition-all duration-300 hamburger-line"></span>
+                    <span class="block w-6 h-0.5 bg-light transition-all duration-300 hamburger-line"></span>
+                    <span class="block w-6 h-0.5 bg-light transition-all duration-300 hamburger-line"></span>
+                </button>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div class="md:hidden hidden bg-primary border-t border-gray-700 mt-3 rounded-b-lg shadow-lg" id="mobile-menu">
+                <div class="flex flex-col py-4">
+                    <a href="index.html" class="mobile-nav-item px-4 py-2 hover:bg-secondary hover:text-accent transition-colors">Home</a>
+                    <a href="about.html" class="mobile-nav-item px-4 py-2 hover:bg-secondary hover:text-accent transition-colors">About</a>
+                    <a href="experience.html" class="mobile-nav-item px-4 py-2 hover:bg-secondary hover:text-accent transition-colors">Experience</a>
+                    <a href="projects.html" class="mobile-nav-item px-4 py-2 hover:bg-secondary hover:text-accent transition-colors">Projects</a>
+                    <a href="contact.html" class="mobile-nav-item px-4 py-2 hover:bg-secondary hover:text-accent transition-colors">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Experience Section -->
+    <section class="pt-24 pb-12 md:pt-32 md:pb-24">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center">Experience</h2>
+            
+            <!-- Work Experience Timeline -->
+            <div class="mb-16">
+                <h3 class="text-2xl font-semibold mb-8 border-b border-gray-200 pb-2">Work Experience</h3>
+                
+                <!-- Timeline Container -->
+                <div class="relative">
+                    <!-- Timeline Line -->
+                    <div class="absolute left-0 md:left-1/2 h-full w-0.5 bg-gray-300 transform -translate-x-1/2"></div>
+                    
+                    <!-- Timeline Item 1 -->
+                    <div class="relative mb-12">
+                        <div class="flex flex-col md:flex-row items-center">
+                            <div class="flex justify-start md:justify-end w-full md:w-1/2 pr-0 md:pr-8">
+                                <div class="bg-white p-5 rounded-lg shadow-md w-full md:max-w-md">
+                                    <h4 class="text-xl font-semibold mb-2">Senior Web Developer</h4>
+                                    <p class="text-gray-600 mb-2">SoftRays Technical institute</p>
+                                    <p class="text-sm text-gray-500 mb-3">January 2020 - Present</p>
+                                    <ul class="list-disc list-inside text-gray-700">
+                                        <li>Led development of responsive web applications using React and Node.js</li>
+                                        <li>Implemented CI/CD pipelines reducing deployment time by 40%</li>
+                                        <li>Mentored junior developers and conducted code reviews</li>
+                                        <li>Optimized application performance resulting in 30% faster load times</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="absolute left-0 md:left-1/2 -translate-x-1/2 w-6 h-6 rounded-full bg-accent border-4 border-white z-10"></div>
+                            <div class="w-full md:w-1/2 pl-0 md:pl-8 mt-6 md:mt-0"></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Timeline Item 2 -->
+                    <div class="relative mb-12">
+                        <div class="flex flex-col md:flex-row items-center">
+                            <div class="flex justify-start w-full md:w-1/2 pr-0 md:pr-8 md:hidden">
+                                <div class="bg-white p-5 rounded-lg shadow-md w-full md:max-w-md">
+                                    <h4 class="text-xl font-semibold mb-2">Web Developer</h4>
+                                    <p class="text-gray-600 mb-2">Previous Company</p>
+                                    <p class="text-sm text-gray-500 mb-3">June 2017 - December 2019</p>
+                                    <ul class="list-disc list-inside text-gray-700">
+                                        <li>Developed and maintained client websites using HTML, CSS, and JavaScript</li>
+                                        <li>Collaborated with designers to implement responsive UI components</li>
+                                        <li>Integrated third-party APIs and payment gateways</li>
+                                        <li>Participated in agile development processes</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="absolute left-0 md:left-1/2 -translate-x-1/2 w-6 h-6 rounded-full bg-accent border-4 border-white z-10"></div>
+                            <div class="w-full md:w-1/2 pl-0 md:pl-8">
+                                <div class="bg-white p-5 rounded-lg shadow-md w-full md:max-w-md hidden md:block">
+                                    <h4 class="text-xl font-semibold mb-2">Web Developer</h4>
+                                    <p class="text-gray-600 mb-2">Previous Company</p>
+                                    <p class="text-sm text-gray-500 mb-3">June 2017 - December 2019</p>
+                                    <ul class="list-disc list-inside text-gray-700">
+                                        <li>Developed and maintained client websites using HTML, CSS, and JavaScript</li>
+                                        <li>Collaborated with designers to implement responsive UI components</li>
+                                        <li>Integrated third-party APIs and payment gateways</li>
+                                        <li>Participated in agile development processes</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Timeline Item 3 -->
+                    <div class="relative">
+                        <div class="flex flex-col md:flex-row items-center">
+                            <div class="flex justify-start md:justify-end w-full md:w-1/2 pr-0 md:pr-8">
+                                <div class="bg-white p-5 rounded-lg shadow-md w-full md:max-w-md">
+                                    <h4 class="text-xl font-semibold mb-2">Junior Web Developer</h4>
+                                    <p class="text-gray-600 mb-2">First Company</p>
+                                    <p class="text-sm text-gray-500 mb-3">January 2015 - May 2017</p>
+                                    <ul class="list-disc list-inside text-gray-700">
+                                        <li>Assisted in front-end development using HTML, CSS, and jQuery</li>
+                                        <li>Built and maintained WordPress websites for clients</li>
+                                        <li>Performed bug fixes and website updates</li>
+                                        <li>Created responsive email templates</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="absolute left-0 md:left-1/2 -translate-x-1/2 w-6 h-6 rounded-full bg-accent border-4 border-white z-10"></div>
+                            <div class="w-full md:w-1/2 pl-0 md:pl-8 mt-6 md:mt-0"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Skills Section -->
+            <div>
+                <h3 class="text-2xl font-semibold mb-8 border-b border-gray-200 pb-2">Skills</h3>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Technical Skills -->
+                    <div>
+                        <h4 class="text-xl font-semibold mb-4">Technical Skills</h4>
+                        
+                        <!-- HTML -->
+                        <div class="mb-4">
+                            <div class="flex justify-between mb-1">
+                                <span class="font-medium">HTML5</span>
+                                <span>95%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                <div class="bg-accent h-2.5 rounded-full" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        
+                        <!-- CSS -->
+                        <div class="mb-4">
+                            <div class="flex justify-between mb-1">
+                                <span class="font-medium">CSS3 / Tailwind / Bootstrap</span>
+                                <span>90%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                <div class="bg-accent h-2.5 rounded-full" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        
+                        <!-- JavaScript -->
+                        <div class="mb-4">
+                            <div class="flex justify-between mb-1">
+                                <span class="font-medium">JavaScript / TypeScript</span>
+                                <span>85%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                <div class="bg-accent h-2.5 rounded-full" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        
+                        <!-- React -->
+                        <div class="mb-4">
+                            <div class="flex justify-between mb-1">
+                                <span class="font-medium">React / Vue.js</span>
+                                <span>80%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                <div class="bg-accent h-2.5 rounded-full" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        
+                        <!-- Node.js -->
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="font-medium">Node.js / Express</span>
+                                <span>75%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                <div class="bg-accent h-2.5 rounded-full" style="width: 75%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Soft Skills -->
+                    <div>
+                        <h4 class="text-xl font-semibold mb-4">Soft Skills</h4>
+                        
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-secondary text-light px-3 py-1 rounded-full text-sm">Problem Solving</span>
+                            <span class="bg-secondary text-light px-3 py-1 rounded-full text-sm">Communication</span>
+                            <span class="bg-secondary text-light px-3 py-1 rounded-full text-sm">Team Collaboration</span>
+                            <span class="bg-secondary text-light px-3 py-1 rounded-full text-sm">Time Management</span>
+                            <span class="bg-secondary text-light px-3 py-1 rounded-full text-sm">Adaptability</span>
+                            <span class="bg-secondary text-light px-3 py-1 rounded-full text-sm">Critical Thinking</span>
+                            <span class="bg-secondary text-light px-3 py-1 rounded-full text-sm">Attention to Detail</span>
+                            <span class="bg-secondary text-light px-3 py-1 rounded-full text-sm">Project Management</span>
+                            <span class="bg-secondary text-light px-3 py-1 rounded-full text-sm">Creativity</span>
+                            <span class="bg-secondary text-light px-3 py-1 rounded-full text-sm">Leadership</span>
+                        </div>
+                        
+                        <h4 class="text-xl font-semibold mt-8 mb-4">Tools & Technologies</h4>
+                        
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-secondary text-light px-3 py-1 rounded-full text-sm">Git / GitHub</span>
+                            <span class="bg-secondary text-light px-3 py-1 rounded-full text-sm">VS Code</span>
+                            <span class="bg-secondary text-light px-3 py-1 rounded-full text-sm">Webpack</span>
+                            <span class="bg-secondary text-light px-3 py-1 rounded-full text-sm">Docker</span>
+                            <span class="bg-secondary text-light px-3 py-1 rounded-full text-sm">AWS</span>
+                            <span class="bg-secondary text-light px-3 py-1 rounded-full text-sm">MongoDB</span>
+                            <span class="bg-secondary text-light px-3 py-1 rounded-full text-sm">PostgreSQL</span>
+                            <span class="bg-secondary text-light px-3 py-1 rounded-full text-sm">Figma</span>
+                            <span class="bg-secondary text-light px-3 py-1 rounded-full text-sm">Jira</span>
+                            <span class="bg-secondary text-light px-3 py-1 rounded-full text-sm">CI/CD</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-primary text-light py-6 transition-all duration-300">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <p>&copy; 2023 John Adebayo. All rights reserved.</p>
+                <div class="flex space-x-4 mt-4 md:mt-0">
+                    <a href="mailto:adebayoifeoluwa105@gmail.com" class="hover:text-accent transition-colors">
+                        <span class="sr-only">Email</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                        </svg>
+                    </a>
+                    <a href="https://wa.me/2347048237504" target="_blank" class="hover:text-accent transition-colors">
+                        <span class="sr-only">WhatsApp</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                        </svg>
+                    </a>
+                    <a href="https://instagram.com/johnpulpy" target="_blank" class="hover:text-accent transition-colors">
+                        <span class="sr-only">Instagram</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 12a4 4 0 10-8 0 4 4 0 008 0zm0 0v1.5a2.5 2.5 0 005 0V12a9 9 0 10-9 9m4.5-1.206a8.959 8.959 0 01-4.5 1.207" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

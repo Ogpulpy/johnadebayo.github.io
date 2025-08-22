@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="1000" viewBox="0 0 800 1000">
+  <rect width="800" height="1000" fill="#ffffff"/>
+  <rect x="50" y="50" width="700" height="900" fill="#f8fafc" stroke="#e5e7eb" stroke-width="2"/>
+  
+  <!-- Header -->
+  <text x="400" y="100" font-family="Arial, sans-serif" font-size="32" font-weight="bold" text-anchor="middle" fill="#0f172a">YOUR NAME</text>
+  <text x="400" y="140" font-family="Arial, sans-serif" font-size="18" text-anchor="middle" fill="#1e293b">Web Developer & Designer</text>
+  
+  <!-- Contact Info -->
+  <text x="400" y="180" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#1e293b">yourname@example.com | +234 XXX XXX XXXX | Your City, Country</text>
+  
+  <!-- Section: Profile -->
+  <text x="100" y="240" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#0f172a">PROFILE</text>
+  <line x1="100" y1="250" x2="700" y2="250" stroke="#38bdf8" stroke-width="2"/>
+  <text x="100" y="280" font-family="Arial, sans-serif" font-size="14" fill="#1e293b">Experienced web developer with a passion for creating responsive, user-friendly applications.</text>
+  <text x="100" y="300" font-family="Arial, sans-serif" font-size="14" fill="#1e293b">Skilled in HTML, CSS, JavaScript, and modern frameworks.</text>
+  
+  <!-- Section: Experience -->
+  <text x="100" y="350" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#0f172a">EXPERIENCE</text>
+  <line x1="100" y1="360" x2="700" y2="360" stroke="#38bdf8" stroke-width="2"/>
+  
+  <text x="100" y="390" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#1e293b">Senior Web Developer</text>
+  <text x="100" y="410" font-family="Arial, sans-serif" font-size="14" fill="#1e293b">Company Name | January 2020 - Present</text>
+  <text x="120" y="440" font-family="Arial, sans-serif" font-size="14" fill="#1e293b">• Led development of responsive web applications</text>
+  <text x="120" y="460" font-family="Arial, sans-serif" font-size="14" fill="#1e293b">• Implemented CI/CD pipelines reducing deployment time</text>
+  
+  <text x="100" y="500" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#1e293b">Web Developer</text>
+  <text x="100" y="520" font-family="Arial, sans-serif" font-size="14" fill="#1e293b">Previous Company | June 2017 - December 2019</text>
+  <text x="120" y="550" font-family="Arial, sans-serif" font-size="14" fill="#1e293b">• Developed and maintained client websites</text>
+  <text x="120" y="570" font-family="Arial, sans-serif" font-size="14" fill="#1e293b">• Collaborated with designers to implement responsive UI components</text>
+  
+  <!-- Section: Skills -->
+  <text x="100" y="620" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#0f172a">SKILLS</text>
+  <line x1="100" y1="630" x2="700" y2="630" stroke="#38bdf8" stroke-width="2"/>
+  
+  <text x="100" y="660" font-family="Arial, sans-serif" font-size="14" fill="#1e293b">HTML5, CSS3, JavaScript, React, Node.js, Tailwind CSS, Git, Responsive Design</text>
+  
+  <!-- Section: Education -->
+  <text x="100" y="710" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#0f172a">EDUCATION</text>
+  <line x1="100" y1="720" x2="700" y2="720" stroke="#38bdf8" stroke-width="2"/>
+  
+  <text x="100" y="750" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#1e293b">Bachelor of Science in Computer Science</text>
+  <text x="100" y="770" font-family="Arial, sans-serif" font-size="14" fill="#1e293b">University Name | 2013 - 2017</text>
+  
+  <!-- Footer -->
+  <text x="400" y="900" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#1e293b">This is a placeholder CV. Replace with your actual CV.</text>
+</svg>

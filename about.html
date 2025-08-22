@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me - My Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0f172a',
+                        secondary: '#1e293b',
+                        accent: '#38bdf8',
+                        light: '#f8fafc',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'Roboto', 'sans-serif'],
+                    },
+                },
+            },
+        }
+    </script>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-light text-primary font-sans">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-primary text-light z-10 transition-all duration-300">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <a href="index.html" class="text-xl font-bold hover:text-accent transition-colors flex items-center">
+                    <span class="text-accent mr-2">&#9733;</span>
+                    <span class="nav-logo-text">My Portfolio</span>
+                </a>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-6">
+                    <a href="index.html" class="nav-item hover:text-accent transition-colors">Home</a>
+                    <a href="about.html" class="nav-item hover:text-accent transition-colors">About</a>
+                    <a href="experience.html" class="nav-item hover:text-accent transition-colors">Experience</a>
+                    <a href="projects.html" class="nav-item hover:text-accent transition-colors">Projects</a>
+                    <a href="contact.html" class="nav-item hover:text-accent transition-colors">Contact</a>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <button class="md:hidden flex flex-col space-y-1.5" id="mobile-menu-button" aria-label="Toggle menu">
+                    <span class="block w-6 h-0.5 bg-light transition-all duration-300 hamburger-line"></span>
+                    <span class="block w-6 h-0.5 bg-light transition-all duration-300 hamburger-line"></span>
+                    <span class="block w-6 h-0.5 bg-light transition-all duration-300 hamburger-line"></span>
+                </button>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div class="md:hidden hidden bg-primary border-t border-gray-700 mt-3 rounded-b-lg shadow-lg" id="mobile-menu">
+                <div class="flex flex-col py-4">
+                    <a href="index.html" class="mobile-nav-item px-4 py-2 hover:bg-secondary hover:text-accent transition-colors">Home</a>
+                    <a href="about.html" class="mobile-nav-item px-4 py-2 hover:bg-secondary hover:text-accent transition-colors">About</a>
+                    <a href="experience.html" class="mobile-nav-item px-4 py-2 hover:bg-secondary hover:text-accent transition-colors">Experience</a>
+                    <a href="projects.html" class="mobile-nav-item px-4 py-2 hover:bg-secondary hover:text-accent transition-colors">Projects</a>
+                    <a href="contact.html" class="mobile-nav-item px-4 py-2 hover:bg-secondary hover:text-accent transition-colors">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- About Section -->
+    <section class="pt-24 pb-12 md:pt-32 md:pb-24">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center">About Me</h2>
+            
+            <!-- Personal Information -->
+            <div class="bg-white shadow-md rounded-lg p-6 mb-8">
+                <h3 class="text-2xl font-semibold mb-4 border-b border-gray-200 pb-2">Personal Information</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                        <p class="mb-2"><span class="font-semibold">Name:</span> John Adebayo</p>
+                        <p class="mb-2"><span class="font-semibold">Date of Birth:</span> May 22, 2001</p>
+                        <p class="mb-2"><span class="font-semibold">Nationality:</span> Nigerian</p>
+                        <p class="mb-2"><span class="font-semibold">Gender:</span> Male</p>
+                        <p class="mb-2"><span class="font-semibold">Marital Status:</span> Single</p>
+                        <p class="mb-2"><span class="font-semibold">Languages:</span> English, French, Yoruba</p>
+                        <p class="mb-2"><span class="font-semibold">Religion:</span> Christian</p>
+                    </div>
+                    <div>
+                        <p class="mb-2"><span class="font-semibold">Email:</span> adebayoifeoluwa105@gmail.com</p>
+                        <p class="mb-2"><span class="font-semibold">Phone:</span> +234 704 823 7504</p>
+                        <p class="mb-2"><span class="font-semibold">Location:</span> Lagos, Nigeria</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Career Objectives -->
+            <div class="bg-white shadow-md rounded-lg p-6 mb-8">
+                <h3 class="text-2xl font-semibold mb-4 border-b border-gray-200 pb-2">Career Objectives</h3>
+                <p class="mb-4">
+                    Dedicated and innovative web developer with a passion for creating responsive, user-friendly applications. 
+                    Seeking to leverage my technical skills and creative problem-solving abilities to contribute to a dynamic 
+                    team where I can continue to grow professionally while delivering exceptional digital experiences.
+                </p>
+                <p>
+                    My goal is to specialize in full-stack development, focusing on modern JavaScript frameworks and 
+                    cloud-based solutions that drive business growth and enhance user engagement.
+                </p>
+            </div>
+            
+            <!-- Profile Summary -->
+            <div class="bg-white shadow-md rounded-lg p-6">
+                <h3 class="text-2xl font-semibold mb-4 border-b border-gray-200 pb-2">Profile Summary</h3>
+                <p class="mb-4">
+                    Results-driven web developer with X years of experience in designing and implementing responsive web applications. 
+                    Proficient in HTML, CSS, JavaScript, and modern frameworks like React and Vue.js. Strong background in UI/UX 
+                    principles with a keen eye for detail and aesthetics.
+                </p>
+                <p class="mb-4">
+                    Experienced in working with cross-functional teams in agile environments, consistently delivering projects 
+                    on time and exceeding client expectations. Adept at translating business requirements into technical solutions 
+                    and optimizing applications for maximum speed and scalability.
+                </p>
+                <p>
+                    Passionate about staying current with emerging technologies and industry best practices, with a commitment 
+                    to continuous learning and professional development.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-primary text-light py-6 transition-all duration-300">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <p>&copy; 2023 John Adebayo. All rights reserved.</p>
+                <div class="flex space-x-4 mt-4 md:mt-0">
+                    <a href="mailto:adebayoifeoluwa105@gmail.com" class="hover:text-accent transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                        </svg>
+                    </a>
+                    <a href="https://wa.me/2347048237504" class="hover:text-accent transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                        </svg>
+                    </a>
+                    <a href="https://instagram.com/johnpulpy" class="hover:text-accent transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 12a4 4 0 10-8 0 4 4 0 008 0zm0 0v1.5a2.5 2.5 0 005 0V12a9 9 0 10-9 9m4.5-1.206a8.959 8.959 0 01-4.5 1.207" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
