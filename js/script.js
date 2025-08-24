@@ -159,3 +159,72 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+
+// Theme Switcher
+function initThemeSwitch() {
+    const themeToggle = document.getElementById('theme-toggle');
+    const mobileThemeToggle = document.getElementById('mobile-theme-toggle');
+    const sunIcon = document.querySelector('.sun-icon');
+    const moonIcon = document.querySelector('.moon-icon');
+    const mobileSunIcon = document.querySelector('.mobile-sun-icon');
+    const mobileMoonIcon = document.querySelector('.mobile-moon-icon');
+    
+    // Check for saved theme preference or use system preference
+    const savedTheme = localStorage.getItem('theme');
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    
+    // Set initial theme
+    if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        sunIcon.classList.remove('hidden');
+        moonIcon.classList.add('hidden');
+        mobileSunIcon.classList.remove('hidden');
+        mobileMoonIcon.classList.add('hidden');
+    } else {
+        document.documentElement.setAttribute('data-theme', 'light');
+        sunIcon.classList.add('hidden');
+        moonIcon.classList.remove('hidden');
+        mobileSunIcon.classList.add('hidden');
+        mobileMoonIcon.classList.remove('hidden');
+    }
+    
+    // Toggle theme function
+    function toggleTheme() {
+        const currentTheme = document.documentElement.getAttribute('data-theme');
+        const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+        
+        // Update theme attribute
+        document.documentElement.setAttribute('data-theme', newTheme);
+        
+        // Update icons
+        if (newTheme === 'dark') {
+            sunIcon.classList.remove('hidden');
+            moonIcon.classList.add('hidden');
+            mobileSunIcon.classList.remove('hidden');
+            mobileMoonIcon.classList.add('hidden');
+        } else {
+            sunIcon.classList.add('hidden');
+            moonIcon.classList.remove('hidden');
+            mobileSunIcon.classList.add('hidden');
+            mobileMoonIcon.classList.remove('hidden');
+        }
+        
+        // Save preference to localStorage
+        localStorage.setItem('theme', newTheme);
+    }
+    
+    // Add event listeners to toggle buttons
+    if (themeToggle) {
+        themeToggle.addEventListener('click', toggleTheme);
+    }
+    
+    if (mobileThemeToggle) {
+        mobileThemeToggle.addEventListener('click', toggleTheme);
+    }
+}
+
+// Initialize theme switcher when DOM is loaded
+document.addEventListener('DOMContentLoaded', function() {
+    // Initialize theme switcher
+    initThemeSwitch();
+});

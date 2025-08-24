@@ -36,7 +36,19 @@
                 </a>
                 
                 <!-- Desktop Menu -->
-                <div class="hidden md:flex space-x-6">
+                <div class="hidden md:flex items-center space-x-6">
+                    <!-- Dark Mode Toggle -->
+                    <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
+                        <!-- Sun icon (for dark mode) -->
+                        <svg xmlns="http://www.w3.org/2000/svg" class="sun-icon hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+                        </svg>
+                        <!-- Moon icon (for light mode) -->
+                        <svg xmlns="http://www.w3.org/2000/svg" class="moon-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+                        </svg>
+                    </button>
+                    
                     <a href="index.html" class="nav-item hover:text-accent transition-colors">Home</a>
                     <a href="about.html" class="nav-item hover:text-accent transition-colors">About</a>
                     <a href="experience.html" class="nav-item hover:text-accent transition-colors">Experience</a>
@@ -55,6 +67,18 @@
             <!-- Mobile Menu -->
             <div class="md:hidden hidden bg-primary border-t border-gray-700 mt-3 rounded-b-lg shadow-lg" id="mobile-menu">
                 <div class="flex flex-col py-4">
+                    <!-- Dark Mode Toggle (Mobile) -->
+                    <button id="mobile-theme-toggle" class="theme-toggle flex items-center px-4 py-2 hover:bg-secondary transition-colors">
+                        <span class="mr-2">Dark Mode</span>
+                        <!-- Sun icon (for dark mode) -->
+                        <svg xmlns="http://www.w3.org/2000/svg" class="mobile-sun-icon hidden" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+                        </svg>
+                        <!-- Moon icon (for light mode) -->
+                        <svg xmlns="http://www.w3.org/2000/svg" class="mobile-moon-icon" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+                        </svg>
+                    </button>
                     <a href="index.html" class="mobile-nav-item px-4 py-2 hover:bg-secondary hover:text-accent transition-colors">Home</a>
                     <a href="about.html" class="mobile-nav-item px-4 py-2 hover:bg-secondary hover:text-accent transition-colors">About</a>
                     <a href="experience.html" class="mobile-nav-item px-4 py-2 hover:bg-secondary hover:text-accent transition-colors">Experience</a>

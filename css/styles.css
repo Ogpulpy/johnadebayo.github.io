@@ -1,5 +1,74 @@
 /* Custom styles beyond Tailwind CSS */
 
+/* Theme variables */
+:root {
+    /* Light theme (default) */
+    --bg-primary: #f8fafc;
+    --bg-secondary: #e2e8f0;
+    --text-primary: #0f172a;
+    --text-secondary: #1e293b;
+    --accent: #38bdf8;
+    --scrollbar-track: #f1f1f1;
+    --scrollbar-thumb: #38bdf8;
+    --scrollbar-thumb-hover: #0284c7;
+    --timeline-line: #e5e7eb;
+    --card-bg: #ffffff;
+    --card-border: #e5e7eb;
+    --nav-bg: #0f172a;
+    --nav-text: #f8fafc;
+    --footer-bg: #0f172a;
+    --footer-text: #f8fafc;
+}
+
+/* Dark theme */
+[data-theme="dark"] {
+    --bg-primary: #0f172a;
+    --bg-secondary: #1e293b;
+    --text-primary: #f8fafc;
+    --text-secondary: #e2e8f0;
+    --accent: #38bdf8;
+    --scrollbar-track: #1e293b;
+    --scrollbar-thumb: #38bdf8;
+    --scrollbar-thumb-hover: #0284c7;
+    --timeline-line: #334155;
+    --card-bg: #1e293b;
+    --card-border: #334155;
+    --nav-bg: #0f172a;
+    --nav-text: #f8fafc;
+    --footer-bg: #0f172a;
+    --footer-text: #f8fafc;
+}
+
+/* Apply theme variables */
+body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+}
+
+.bg-primary {
+    background-color: var(--nav-bg) !important;
+}
+
+.bg-secondary {
+    background-color: var(--bg-secondary) !important;
+}
+
+.text-primary {
+    color: var(--text-primary) !important;
+}
+
+.text-light {
+    color: var(--nav-text) !important;
+}
+
+.bg-white {
+    background-color: var(--card-bg) !important;
+}
+
+.border-gray-200 {
+    border-color: var(--card-border) !important;
+}
+
 /* Smooth scrolling */
 html {
     scroll-behavior: smooth;
@@ -33,7 +102,7 @@ html {
     content: '';
     position: absolute;
     width: 2px;
-    background-color: #e5e7eb;
+    background-color: var(--timeline-line);
     top: 0;
     bottom: 0;
     left: 50%;
@@ -46,21 +115,50 @@ html {
 }
 
 ::-webkit-scrollbar-track {
-    background: #f1f1f1;
+    background: var(--scrollbar-track);
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #38bdf8;
+    background: var(--scrollbar-thumb);
     border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: #0284c7;
+    background: var(--scrollbar-thumb-hover);
+}
+
+/* Theme transition */
+* {
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Dark mode toggle */
+.theme-toggle {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    margin-right: 1rem;
+}
+
+.theme-toggle svg {
+    width: 20px;
+    height: 20px;
+    transition: transform 0.3s ease;
+}
+
+.theme-toggle:hover svg {
+    transform: rotate(30deg);
 }
 
 /* Placeholder image styles */
 #profile-image, #project1-image, #project2-image, #project3-image, #project4-image, #project5-image, #project6-image {
     background-color: #e5e7eb;
+}
+
+/* Profile image centering */
+#profile-image {
+    object-fit: cover;
+    object-position: center;
 }
 
 /* Make SVG images responsive */
